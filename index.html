@@ -173,11 +173,11 @@
   <div class="card">
     <h2>Enhancement Three: Databases</h2>
     <p>
-      <strong>Artifact:</strong> Database enhancements on Weight Tracker<br />
-      <strong>Description:</strong> Added database capabilities and integration for dynamic data handling.
+      <strong>Artifact:</strong> Weight Tracker App with SQLite Database Integration<br />
+      <strong>Description:</strong> Added SQL triggers.
     </p>
     <p>
-      This enhancement involved adding SQLite database integration to a 3D rendering project initially created in CS-330. The database replaced hardcoded transformation values, allowing for dynamic runtime updates to objects within a desk scene. This included creating database schemas, performing indexed queries, and efficiently retrieving data. The project highlights my ability to integrate databases into computational graphics to enable dynamic and scalable solutions.
+      This enhancement transforms the original Weight Tracker app into a more robust, data-driven application by integrating a full SQLite database. I implemented a database schema that includes tables for storing user weight entries and created SQL triggers for automatically logging all insert and update actions. These triggers are defined in the <code>onCreate()</code> method of the <code>DatabaseHelper.java</code> class to ensure they are initialized correctly when the app's database is first created. With the addition of persistent data storage, indexed queries, and audit logging via triggers, the app now supports long-term data retention and improved performance. This demonstrates my ability to design structured relational databases and embed them within mobile applications.
     </p>
     <div class="download-links">
       <a href="enhancement-three/WeightTrackerOriginal.zip" target="_blank" rel="noopener noreferrer">Download Original Artifact</a>
