@@ -173,6 +173,7 @@
     </p>
   <img src="enhancement-two/binary_search_weight_entry.png" alt="Binary Search Implementation" style="max-width: 100%; margin: 10px 0;" />
   <img src="enhancement-two/moving_average_weight_entry.png" alt="7-Day Moving Average Calculation" style="max-width: 100%; margin: 10px 0;" />
+    
     <div class="download-links">
       <a href="enhancement-two/WeightTrackerOriginal.zip" target="_blank" rel="noopener noreferrer">Download Original Artifact</a>
       <a href="enhancement-two/WeightTrackerEnhancementTwo.zip" target="_blank" rel="noopener noreferrer">Download Enhanced Artifact</a>
@@ -189,6 +190,11 @@
     <p>
       This enhancement transforms the original Weight Tracker app into a more robust, data-driven application by integrating a full SQLite database. I implemented a database schema that includes tables for storing user weight entries and created SQL triggers for automatically logging all insert and update actions. These triggers are defined in the <code>onCreate()</code> method of the <code>DatabaseHelper.java</code> class to ensure they are initialized correctly when the app's database is first created. With the addition of persistent data storage, indexed queries, and audit logging via triggers, the app now supports long-term data retention and improved performance. This demonstrates my ability to design structured relational databases and embed them within mobile applications.
     </p>
+     <p>
+      Below are the code snippets implementing these SQL trigger enhancements:
+    </p>
+    <img src="enhancement_three/weight_tracker_database_triggers.png" alt="Database Trigger SQL Code in Weight Tracker App" style="max-width: 100%; margin: 20px 0; border: 1px solid #ccc; border-radius: 8px;" />
+    
     <div class="download-links">
       <a href="enhancement-three/WeightTrackerOriginal.zip" target="_blank" rel="noopener noreferrer">Download Original Artifact</a>
       <a href="enhancement-three/WeightTrackerEnhancementThree.zip" target="_blank" rel="noopener noreferrer">Download Enhanced Artifact</a>
