@@ -8,11 +8,14 @@
       --primary: #1a73e8;
       --primary-dark: #0d47a1;
       --secondary: #34a853;
-      --background: #f8f9fa;
+      --accent: #fbbc04;
+      --background: #f0f4f8;
       --text: #202124;
       --text-light: #5f6368;
       --card-bg: #ffffff;
       --border: #dadce0;
+      --shadow-light: rgba(26, 115, 232, 0.15);
+      --shadow-strong: rgba(13, 71, 161, 0.25);
     }
 
     body {
@@ -29,77 +32,117 @@
       color: var(--primary-dark);
       font-size: 2.5rem;
       margin-bottom: 20px;
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: 10px;
+      border-bottom: 4px solid var(--accent);
+      padding-bottom: 12px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-shadow: 0 1px 1px var(--shadow-light);
     }
 
     h2 {
       color: var(--primary);
-      font-size: 1.8rem;
-      margin-top: 30px;
+      font-size: 1.9rem;
+      margin-top: 36px;
+      text-shadow: 0 1px 0 var(--shadow-light);
+      border-left: 6px solid var(--accent);
+      padding-left: 10px;
     }
 
     a {
       color: var(--primary);
       text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
+      font-weight: 600;
+      transition: color 0.25s ease, transform 0.2s ease;
     }
 
     a:hover {
       color: var(--primary-dark);
       text-decoration: underline;
+      transform: scale(1.05);
     }
 
     hr {
       border: 0;
-      height: 1px;
-      background: var(--border);
+      height: 2px;
+      background: var(--accent);
       margin: 40px 0;
+      border-radius: 2px;
+      box-shadow: 0 0 8px var(--shadow-strong);
     }
 
     p {
-      margin: 15px 0;
+      margin: 18px 0;
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
     }
 
     .card {
       background: var(--card-bg);
-      border-radius: 8px;
-      padding: 25px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      padding: 30px 28px;
+      margin-bottom: 40px;
+      box-shadow:
+        0 8px 20px var(--shadow-light),
+        inset 0 0 15px rgba(255 255 255 / 0.8);
+      border-left: 6px solid var(--primary);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow:
+        0 12px 28px var(--shadow-strong),
+        inset 0 0 18px rgba(255 255 255 / 0.9);
     }
 
     .card h2 {
       margin-top: 0;
+      font-weight: 700;
     }
 
     .download-links {
-      margin-top: 15px;
+      margin-top: 22px;
     }
 
     .download-links a {
       display: inline-block;
-      margin-right: 15px;
-      margin-bottom: 10px;
-      padding: 8px 15px;
-      background-color: var(--primary);
-      color: white;
-      border-radius: 4px;
-      transition: background-color 0.2s;
+      margin-right: 18px;
+      margin-bottom: 12px;
+      padding: 10px 20px;
+      background-color: var(--accent);
+      color: var(--primary-dark);
+      border-radius: 6px;
+      font-weight: 600;
+      box-shadow: 0 4px 8px var(--shadow-light);
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.15s ease;
+      border: 2px solid transparent;
     }
 
     .download-links a:hover {
-      background-color: var(--primary-dark);
-      text-decoration: none;
+      background-color: var(--primary);
+      color: white;
+      border-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px var(--shadow-strong);
+    }
+
+    img {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-top: 14px;
+      box-shadow: 0 6px 18px var(--shadow-light);
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
 
     footer {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 70px;
       color: var(--text-light);
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+      font-style: italic;
+      letter-spacing: 0.03em;
+      user-select: none;
     }
 
     @media (max-width: 768px) {
@@ -108,7 +151,16 @@
       }
 
       h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        border-left-width: 4px;
+      }
+
+      .card {
+        padding: 24px 18px;
       }
     }
   </style>
@@ -150,11 +202,9 @@
     <p>
       Below is a screenshot of the Weight Tracker app’s user interface, demonstrating the clean and simple design used to log and view weight entries.
     </p>
-  <img src="enhancement-one/weight_tracker_ui.png" alt="Weight Tracker App User Interface" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px; margin-top: 10px;">
-    
+    <img src="enhancement-one/weight_tracker_ui.png" alt="Weight Tracker App User Interface" />
     <div class="download-links">
-      <a href="enhancement-one/WeightTrackerOriginal.zip" target="_blank" rel="noopener noreferrer">Download Original Artifact</a>
-      <a href="enhancement-one/WeightTrackerEnhancementOne.zip" target="_blank" rel="noopener noreferrer">Download Enhanced Artifact</a>
+      <a href="https://github.com/jorgoexe/Enhancement-One-Software-Design-and-Engineering" target="_blank" rel="noopener noreferrer">View Repository</a>
       <a href="enhancement-one/CS-499, 3-2 Milestone.docx" target="_blank" rel="noopener noreferrer">Read Enhancement Narrative</a>
     </div>
   </div>
@@ -171,12 +221,10 @@
     <p>
       Below are code snippets that visually illustrate the key enhancements:
     </p>
-  <img src="enhancement-two/binary_search_weight_entry.png" alt="Binary Search Implementation" style="max-width: 100%; margin: 10px 0;" />
-  <img src="enhancement-two/moving_average_weight_entry.png" alt="7-Day Moving Average Calculation" style="max-width: 100%; margin: 10px 0;" />
-    
+    <img src="enhancement-two/binary_search_weight_entry.png" alt="Binary Search Implementation" />
+    <img src="enhancement-two/moving_average_weight_entry.png" alt="7-Day Moving Average Calculation" />
     <div class="download-links">
-      <a href="enhancement-two/WeightTrackerOriginal.zip" target="_blank" rel="noopener noreferrer">Download Original Artifact</a>
-      <a href="enhancement-two/WeightTrackerEnhancementTwo.zip" target="_blank" rel="noopener noreferrer">Download Enhanced Artifact</a>
+      <a href="https://github.com/jorgoexe/Enhancement-Two-Algorithms-and-Data-Structures" target="_blank" rel="noopener noreferrer">View Repository</a>
       <a href="enhancement-two/CS-499, 4-2 Milestone Three.docx" target="_blank" rel="noopener noreferrer">Read Enhancement Narrative</a>
     </div>
   </div>
@@ -190,14 +238,12 @@
     <p>
       This enhancement transforms the original Weight Tracker app into a more robust, data-driven application by integrating a full SQLite database. I implemented a database schema that includes tables for storing user weight entries and created SQL triggers for automatically logging all insert and update actions. These triggers are defined in the <code>onCreate()</code> method of the <code>DatabaseHelper.java</code> class to ensure they are initialized correctly when the app's database is first created. With the addition of persistent data storage, indexed queries, and audit logging via triggers, the app now supports long-term data retention and improved performance. This demonstrates my ability to design structured relational databases and embed them within mobile applications.
     </p>
-     <p>
+    <p>
       Below are the code snippets implementing these SQL trigger enhancements:
     </p>
-    <img src="enhancement-three/weight_tracker_database_triggers.png" alt="Database Trigger SQL Code in Weight Tracker App" style="max-width: 100%; margin: 20px 0; border: 1px solid #ccc; border-radius: 8px;" />
-    
+    <img src="enhancement-three/weight_tracker_database_triggers.png" alt="Database Trigger SQL Code in Weight Tracker App" />
     <div class="download-links">
-      <a href="enhancement-three/WeightTrackerOriginal.zip" target="_blank" rel="noopener noreferrer">Download Original Artifact</a>
-      <a href="enhancement-three/WeightTrackerEnhancementThree.zip" target="_blank" rel="noopener noreferrer">Download Enhanced Artifact</a>
+      <a href="https://github.com/jorgoexe/Enhancement-Three-Databases" target="_blank" rel="noopener noreferrer">View Repository</a>
       <a href="enhancement-three/CS-499 5-2 Milestone.docx" target="_blank" rel="noopener noreferrer">Read Enhancement Narrative</a>
     </div>
   </div>
