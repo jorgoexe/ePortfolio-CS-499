@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <title>Jorgo's CS-499 ePortfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     :root {
-      --primary: #2e7d32;
-      --primary-dark: #1b5e20;
-      --secondary: #66bb6a;
-      --accent: #fbbc04;
-      --background: #e8f5e9;
+      --primary: #2e7d32;          /* Turtle shell green */
+      --primary-dark: #1b5e20;     /* Darker green for contrast */
+      --secondary: #81c784;        /* Accent green */
+      --accent: #fbbc04;           /* Golden yellow */
+      --background: #e8f5e9;       /* Turtle-green background */
       --text: #1b1f1b;
       --text-light: #5f6368;
       --card-bg: #ffffff;
       --border: #c8e6c9;
-      --shadow-light: rgba(26, 115, 232, 0.15);
-      --shadow-strong: rgba(13, 71, 161, 0.25);
+      --shadow-light: rgba(46, 125, 50, 0.12);
+      --shadow-strong: rgba(27, 94, 32, 0.25);
     }
 
     body {
       font-family: 'Segoe UI', Roboto, Arial, sans-serif;
       line-height: 1.6;
-      max-width: 900px;
+      max-width: 960px;
       margin: 40px auto;
       padding: 0 20px;
       background-color: var(--background);
@@ -31,7 +32,7 @@
     h1 {
       color: var(--primary-dark);
       font-size: 2.5rem;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       border-bottom: 4px solid var(--accent);
       padding-bottom: 12px;
       font-weight: 700;
@@ -45,7 +46,7 @@
       margin-top: 36px;
       text-shadow: 0 1px 0 var(--shadow-light);
       border-left: 6px solid var(--accent);
-      padding-left: 10px;
+      padding-left: 12px;
     }
 
     a {
@@ -81,17 +82,13 @@
       border-radius: 12px;
       padding: 30px 28px;
       margin-bottom: 40px;
-      box-shadow:
-        0 8px 20px var(--shadow-light),
-        inset 0 0 15px rgba(255 255 255 / 0.8);
+      box-shadow: 0 8px 20px var(--shadow-light), inset 0 0 15px rgba(255, 255, 255, 0.8);
       border-left: 6px solid var(--primary);
       transition: box-shadow 0.3s ease;
     }
 
     .card:hover {
-      box-shadow:
-        0 12px 28px var(--shadow-strong),
-        inset 0 0 18px rgba(255 255 255 / 0.9);
+      box-shadow: 0 12px 28px var(--shadow-strong), inset 0 0 18px rgba(255, 255, 255, 0.9);
     }
 
     .card h2 {
@@ -166,6 +163,7 @@
   </style>
 </head>
 <body>
+
 
   <h1>Welcome to My CS-499 ePortfolio</h1>
   <p>This site showcases my enhanced software artifacts, narratives, and a professional self-assessment as the capstone of my B.S. in Computer Science at SNHU.</p>
